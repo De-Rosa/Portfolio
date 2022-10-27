@@ -1,0 +1,75 @@
+#intro-text-wrapper{
+    justify-items: center;
+    width: 33.4%;
+    min-height: 10vh;
+    padding-top: 41vh;
+    float:left;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-wrap;
+    column-count: 3;
+    animation-fill-mode: forwards;
+}
+#tower-text-wrapper {
+    /*justify-items: center;*/
+    width: 35%;
+    min-height: 10vh;
+    padding-top: 15vh;
+    padding-right: 2vw;
+    float:right;
+    display: grid;
+    white-space: pre-wrap;
+    column-count: 3;
+    animation-fill-mode: forwards;
+}
+.griditem {
+    display: inline-grid;
+    animation-fill-mode: forwards;
+}
+
+.tower-griditem {
+    display: inline-grid;
+    opacity: 0%;
+    padding-left: 5vw;
+    animation-fill-mode: forwards;
+}
+
+#name {
+    font-weight: bolder;
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 300%;
+    animation-fill-mode: forwards;
+}
+
+.lowertext {
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 150%;
+    font-weight: normal;
+    animation-fill-mode: forwards;
+}
+
+#title {
+    font-weight: bolder;
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 300%;
+    animation-fill-mode: forwards;
+}
+
+.text {
+    font-weight: normal;
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 150%;
+    color: black;
+    padding-top: 3vh;
+    animation-fill-mode: forwards;
+}
+
+body {
+    background-image: linear-gradient(to bottom, white, #dddddd);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation-fill-mode: forwards;
+}
