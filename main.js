@@ -3,7 +3,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls} from "/node_modules/three/examples/jsm/controls/OrbitControls";
-import * as TWEEN from "/tween.umd.js";
 
 let activeFloor = 0;
 
