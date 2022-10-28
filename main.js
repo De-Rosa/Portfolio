@@ -91,7 +91,7 @@ light2.name = 'main_light';
 scene.add( light2 );
 
 const modelLoader = new GLTFLoader();
-modelLoader.load("lucarenderz.glb", function(gltf) {
+modelLoader.load("./lucarenderz.glb", function(gltf) {
     gltf.scene.scale.set(100,100,100);
     gltf.scene.position.set(0,-150,0);
 
