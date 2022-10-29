@@ -3,6 +3,7 @@
 import * as THREE from "three";
 import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls} from "/node_modules/three/examples/jsm/controls/OrbitControls";
+import { DRACOLoader} from "three/addons/loaders/DRACOLoader.js";
 
 let activeFloor = 0;
 let isLoadingActive = true;
