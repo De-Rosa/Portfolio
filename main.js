@@ -5,6 +5,13 @@ import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.
 import { OrbitControls} from "/node_modules/three/examples/jsm/controls/OrbitControls";
 
 let activeFloor = 0;
+let isLoadingActive = true;
+
+const modelLoader = new GLTFLoader();
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath("/node_modules/three/examples/js/libs/draco/gltf/")
+dracoLoader.preload();
+modelLoader.setDRACOLoader(dracoLoader);
 
 //middle of room for origin (control) pos and +220 origin for camera pos
 const floorCameraCoordinates = [[220,120,220],
@@ -89,18 +96,31 @@ light2.position.set(0.5, 0, 0.866); // ~60º
 light2.name = 'main_light';
 scene.add( light2 );
 
+// loading cube
+var geometry = new THREE.BoxGeometry(50,50,50);
+var material = new THREE.MeshBasicMaterial({color: 0x000000});
+var cube = new THREE.Mesh(geometry, material);
+cube.position.set(0,-75,0)
+scene.add(cube)
+
 const modelLoader = new GLTFLoader();
 modelLoader.load("/portfolio/lucarenderz.glb", function(gltf) {
     gltf.scene.scale.set(100,100,100);
     gltf.scene.position.set(0,-150,0);
 
     scene.add(gltf.scene);
+    isLoadingActive = false;
+    scene.remove(cube);
 })
 
 function render() {
     requestAnimationFrame(render);
     controls.update();
     TWEEN.update();
+    if (isLoadingActive) {
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+    }
     renderer.render(scene, camera);
 }
 
