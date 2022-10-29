@@ -41,7 +41,6 @@
     font-family: Helvetica Neue, sans-serif;
     font-size: 300%;
     animation-fill-mode: forwards;
-    color: white;
 }
 
 .lowertext {
@@ -49,7 +48,6 @@
     font-size: 150%;
     font-weight: normal;
     animation-fill-mode: forwards;
-    color: white;
 }
 
 #title {
@@ -57,20 +55,19 @@
     font-family: Helvetica Neue, sans-serif;
     font-size: 300%;
     animation-fill-mode: forwards;
-    color: white;
 }
 
 .text {
     font-weight: normal;
     font-family: Helvetica Neue, sans-serif;
     font-size: 150%;
-    color: white;
+    color: black;
     padding-top: 3vh;
     animation-fill-mode: forwards;
 }
 
 body {
-    background-image: linear-gradient(to bottom, #121212, #000000);
+    background-image: linear-gradient(to bottom, white, #dddddd);
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;

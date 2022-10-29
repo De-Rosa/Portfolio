@@ -48,7 +48,7 @@ let items = document.getElementsByClassName("tower-griditem");
 let animationActive = false;
 let isTextActive = false;
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x121212);
+scene.background = new THREE.Color(0xEEEEEE);
 
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -103,7 +103,7 @@ var cube = new THREE.Mesh(geometry, material);
 cube.position.set(0,-75,0)
 scene.add(cube)
 
-const modelLoader = new GLTFLoader();
+
 modelLoader.load("/portfolio/lucarenderz.glb", function(gltf) {
     gltf.scene.scale.set(100,100,100);
     gltf.scene.position.set(0,-150,0);
@@ -297,15 +297,21 @@ async function decreaseTowerFloor() {
 
 renderer.domElement.onclick = function () {
     let mouseY = event.clientY;
+    if (isLoadingActive) {
+        let randColor = new THREE.Color( 0xffffff );
+        randColor.setHex( Math.random() * 0xffffff );
+        cube.material.color = randColor;
+
+        return;
+    }
     if (!isSceneActive) {
         openWebsite();
     } else {
-        if (mouseY < 100) {
-            //move up
+        let mousePosition = mouseY/window.innerHeight;
+        if (mousePosition < 0.2) {
             increaseTowerFloor();
 
-        } else if (mouseY > 200) {
-            //move down
+        } else if (mousePosition > 0.8) {
             decreaseTowerFloor();
         }
 
@@ -317,4 +323,4 @@ window.onresize = function () {
     camera.updateProjectionMatrix();
 
     renderer.setSize((window.innerWidth / 1.5), window.innerHeight);
-};
+}
