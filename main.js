@@ -39,7 +39,7 @@ const text = [
         "I have created many web (and console) applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#.",
         "I have created a Python AI using Tensorflow to take in Discord (a messaging service) messages and try to learn speech by using it as a training resource. It would then try to use this to act as a chat bot.",
         "In order to learn C# before A levels I have created a physics engine that emulates buoyancy of drawn objects.",
-        "I made a 3D matrix transformation graphing website that tells you the type of transformation it is and calculates the inverse of the input matrix so that me and my Mathematics teacher can utilize it for revision. (https://squaregithub.gitlab.io/matrix/)",
+        "I made a 3D matrix transformation graphing website that tells you the type of transformation it is and calculates the inverse of the input matrix so that I could use it for revision. (https://squaregithub.gitlab.io/matrix/)",
         "Before GCSEs, I created a web game so that I, and a few friends, could revise in other forms. (https://squaregithub.gitlab.io/prism/)"
     ]
 ]
