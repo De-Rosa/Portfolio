@@ -112,10 +112,17 @@ modelLoader.load("/portfolio/lucarenderz.glb", function(gltf) {
     scene.add(gltf.scene);
     isLoadingActive = false;
     scene.remove(cube);
+    mixer = new THREE.AnimationMixer( gltf.scene );
+    gltf.animations.forEach(( clip ) => {
+        mixer.clipAction(clip).play();
+    });
 })
 
 function render() {
     requestAnimationFrame(render);
+    const delta = clock.getDelta();
+    if ( mixer ) mixer.update( delta );
+
     controls.update();
     TWEEN.update();
     if (isLoadingActive) {
@@ -124,6 +131,7 @@ function render() {
     }
     renderer.render(scene, camera);
 }
+
 
 render();
 
