@@ -108,7 +108,7 @@ cube.position.set(0,-75,0)
 scene.add(cube)
 
 
-modelLoader.load("/portfolio/lucarenderz.glb", function(gltf) {
+modelLoader.load("/portfolio/compressedTower.glb", function(gltf) {
     gltf.scene.scale.set(100,100,100);
     gltf.scene.position.set(0,-150,0);
 
