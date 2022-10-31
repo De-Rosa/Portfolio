@@ -8,6 +8,9 @@ import { DRACOLoader} from "/node_modules/three/examples/jsm/loaders/DRACOLoader
 let activeFloor = 0;
 let isLoadingActive = true;
 
+let mixer;
+let clock = new THREE.Clock();
+
 const modelLoader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath("/portfolio/draco/")
