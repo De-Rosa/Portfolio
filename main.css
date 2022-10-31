@@ -2,7 +2,7 @@
     justify-items: center;
     width: 33.4%;
     min-height: 10vh;
-    padding-top: 41vh;
+    padding-top: 45vh;
     float:left;
     text-align: center;
     display: grid;
@@ -48,6 +48,7 @@
     font-size: 150%;
     font-weight: normal;
     animation-fill-mode: forwards;
+    opacity: 0%;
 }
 
 #title {

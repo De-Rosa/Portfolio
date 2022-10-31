@@ -119,7 +119,48 @@ modelLoader.load("/portfolio/lucarenderz.glb", function(gltf) {
     gltf.animations.forEach(( clip ) => {
         mixer.clipAction(clip).play();
     });
+   moveElementsOnLeft();
 })
+
+async function moveElementsOnLeft() {
+    await raiseName();
+    await showLowerText()
+}
+
+async function showLowerText() {
+    if (animationActive) return;
+    animationActive = true;
+    let lowerTextElements = document.getElementsByClassName("lowertext");
+    for (let i=0; i<lowerTextElements.length; i++) {
+        await lowerTextElements[i].animate([
+            {opacity: "0%"},
+            {opacity: "100%"},
+        ], {
+            duration: 500,
+            iterations: 1,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            fill: "forwards"
+        })
+    }
+    animationActive = false;
+}
+
+async function raiseName() {
+    if (animationActive) return;
+    animationActive = true;
+    let wrapper = document.getElementById("intro-text-wrapper");
+    await wrapper.animate([
+        {paddingTop: "45vh"},
+        {paddingTop: "41vh"},
+    ], {
+        duration: 500,
+        iterations: 1,
+        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+        fill: "forwards"
+    })
+
+    animationActive = false;
+}
 
 function render() {
     requestAnimationFrame(render);
