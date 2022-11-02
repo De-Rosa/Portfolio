@@ -24,21 +24,21 @@ const floorCameraCoordinates = [[220,120,220],
 const floorControlCoordinates = [[0,-100,0], [-150,190,-300],[-470,490,-300]]
 
 const text = [
-    ["About Me",
+    [" About Me",
         "I have experience coding in numerous programming languages, such as C#, Python, Java, HTML, Javascript, and C++.",
         "I enjoy coding in programming languages mainly because I get to understand more complex solutions to coding problems and more intricate details of these languages.",
         "As I have been using computers since I was young, I have always had ambition to code - initially creating Java plugins for Minecraft.",
         "Nowadays, I am always surrounded with topics related to computing (media relating to programming) and so I always try to learn something new every day.",
         "I am currently studying Maths, Further Maths, and Computer Science for A Levels."
     ],
-    ["Books",
+    [" Books",
         "In order to further my knowledge on subjects relating to coding I read books on how I can try to problem solve differently.",
         "Some books I have read include:",
         "Clean Code by Robert C. Martin",
         "Data-Oriented Design by Richard Fabian",
         "And other books relating to learning Visual Basic, C++, and C#."
     ],
-    ["Projects",
+    [" Projects",
         "I have created many web (and console) applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#.",
         "I have created a Python AI using Tensorflow to take in Discord (a messaging service) messages and try to learn speech by using it as a training resource. It would then try to use this to act as a chat bot.",
         "In order to learn C# before A levels I have created a physics engine that emulates buoyancy of drawn objects.",
@@ -102,7 +102,7 @@ scene.add( light2 );
 
 // loading cube
 var geometry = new THREE.BoxGeometry(50,50,50);
-var material = new THREE.MeshBasicMaterial({color: 0x000000});
+var material = new THREE.MeshBasicMaterial({color: 0xffffff});
 var cube = new THREE.Mesh(geometry, material);
 cube.position.set(0,-75,0)
 scene.add(cube)
@@ -119,7 +119,8 @@ modelLoader.load("/portfolio/compressedTower.glb", function(gltf) {
     gltf.animations.forEach(( clip ) => {
         mixer.clipAction(clip).play();
     });
-   moveElementsOnLeft();
+
+    moveElementsOnLeft();
 })
 
 async function moveElementsOnLeft() {
@@ -145,6 +146,18 @@ async function showLowerText() {
     animationActive = false;
 }
 
+async function hideName() {
+    let wrapper = document.getElementById("intro-text-wrapper");
+    await wrapper.animate([
+        {opacity: "100%"},
+        {opacity: "0%"},
+    ], {
+        duration: 500,
+        iterations: 1,
+        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+        fill: "forwards"
+    })
+}
 async function raiseName() {
     if (animationActive) return;
     animationActive = true;
@@ -166,7 +179,6 @@ function render() {
     requestAnimationFrame(render);
     const delta = clock.getDelta();
     if ( mixer ) mixer.update( delta );
-
     controls.update();
     TWEEN.update();
     if (isLoadingActive) {
@@ -175,7 +187,6 @@ function render() {
     }
     renderer.render(scene, camera);
 }
-
 
 render();
 
@@ -217,7 +228,7 @@ async function lerpBetweenFloors(timingInMs) {
 
 async function openWebsite() {
     renderer.domElement.style.cursor = "grabbing";
-
+    await hideName();
     await animateMovementModel();
     animationActive = true;
 
@@ -264,10 +275,10 @@ async function moveCameraDown() {
     animationActive = false;
 }
 async function getText () {
-    let colours = ["mediumseagreen", "lightskyblue", "firebrick"]
+    let colours = ["url(#green-gradient)", "url(#blue-gradient)", "url(#red-gradient)"]
     let title = text[activeFloor][0];
     document.getElementById("title").innerHTML = title;
-    document.getElementById("title").style.color = colours[activeFloor];
+    document.getElementById("polygonTitle").style.fill = colours[activeFloor]
 
     let textItems = document.getElementsByClassName("text");
     for (let i = 0; i < text[activeFloor].length-1; i++) {
@@ -303,7 +314,7 @@ async function showTowerTextElements() {
         })
         items[i].style.opacity = "100%";
         items[i].style.paddingLeft = "0vw";
-        await delay(100);
+        // await delay(100);
     }
     isTextActive = true;
     animationActive = false;
@@ -376,4 +387,4 @@ window.onresize = function () {
     camera.updateProjectionMatrix();
 
     renderer.setSize((window.innerWidth / 1.5), window.innerHeight);
-}
+};

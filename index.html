@@ -8,14 +8,30 @@
 </head>
 
 <body>
-    <script src="/portfolio/tween.umd.js"></script>
+    <script src="js/tween.umd.js"></script>
     <script src="main.js" type="module"></script>
+    <script src="background.js" type="module"></script>
 
     <style>
         body { margin: 0 }
     </style>
     <div id="intro-text-wrapper">
         <div class="griditem">
+            <svg height="250" width="550" style="position: absolute;z-index: -100">
+                <polygon points="0,0 0,60 320,60 320,0" style="fill:white;" id="polygonName">
+                     <animate attributeName="points" dur="2s" fill="freeze" repeatCount="indefinite"
+                                 values="0,0 0,60 320,60 320,0;
+                             -5,5 10,80 310,60 300,10;
+                             0,-2 -10,60 320,40 310,10;
+                             -2,3 4,50 340,60 330,20;
+                             0,10 15,60 360,80 310,10;
+                             -2,3 4,70 340,70 330,20;
+                             0,-2 -10,60 320,40 310,10;
+                             5,4 5,80 310,60 300,10;
+                             0,0 0,60 320,70 320,0"
+                        />
+                </polygon>
+            </svg>
             <div id="name">Luca De Rosa</div>
         </div>
         <div class="griditem">
@@ -31,6 +47,58 @@
 
     <div id="tower-text-wrapper">
         <div class="tower-griditem">
+            <svg height="210" width="600" style="position: absolute;z-index: -100" id="svg">
+                <defs>
+                    <linearGradient id="green-gradient" x1="0%" y1="50%" x2="100%" y2="50%" >
+
+                        <stop offset="0%" stop-color="#7A5FFF">
+                            <animate attributeName="stop-color" values="#2EB62C; #04A5E2; #2EB62C" dur="4s" repeatCount="indefinite"></animate>
+                        </stop>
+
+                        <stop offset="100%" stop-color="#01FF89">
+                            <animate attributeName="stop-color" values="#04A5E2; #2EB62C; #04A5E2" dur="4s" repeatCount="indefinite"></animate>
+                        </stop>
+
+                    </linearGradient>
+                    <linearGradient id="blue-gradient" x1="0%" y1="50%" x2="100%" y2="50%" >
+
+                        <stop offset="0%" stop-color="#7A5FFF">
+                            <animate attributeName="stop-color" values="#2EAAFA; #8C04DB; #2EAAFA" dur="4s" repeatCount="indefinite"></animate>
+                        </stop>
+
+                        <stop offset="100%" stop-color="#01FF89">
+                            <animate attributeName="stop-color" values="#8C04DB; #2EAAFA; #8C04DB" dur="4s" repeatCount="indefinite"></animate>
+                        </stop>
+
+                    </linearGradient>
+                    <linearGradient id="red-gradient" x1="0%" y1="50%" x2="100%" y2="50%" >
+
+                        <stop offset="0%" stop-color="#7A5FFF">
+                            <animate attributeName="stop-color" values="#870009; #D7008A; #870009" dur="4s" repeatCount="indefinite"></animate>
+                        </stop>
+
+                        <stop offset="100%" stop-color="#01FF89">
+                            <animate attributeName="stop-color" values="#D7008A; #870009; #D7008A" dur="4s" repeatCount="indefinite"></animate>
+                        </stop>
+
+                    </linearGradient>
+                </defs>
+                <g>
+                    <polygon points="0,0 0,60 1000,60 1000,0" id="polygonTitle" fill="url(#green-gradient)">
+                        <animate attributeName="points" dur="2s" fill="freeze" repeatCount="indefinite"
+                                 values="0,0 0,60 320,60 320,0;
+                             -5,5 10,80 310,60 300,10;
+                             0,-2 -10,60 320,40 310,10;
+                             -2,3 4,50 340,60 330,20;
+                             0,10 15,60 360,80 310,10;
+                             -2,3 4,70 340,70 330,20;
+                             0,-2 -10,60 320,40 310,10;
+                             5,4 5,80 310,60 300,10;
+                             0,0 0,60 320,70 320,0"
+                        />
+                    </polygon>
+                </g>
+            </svg>
             <div id="title">title</div>
         </div>
         <div class="tower-griditem">
@@ -49,7 +117,6 @@
             <div class="text">text e</div>
         </div>
     </div>
-
 </body>
 
 </html>

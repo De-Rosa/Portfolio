@@ -41,7 +41,7 @@
     font-family: Helvetica Neue, sans-serif;
     font-size: 300%;
     animation-fill-mode: forwards;
-    color: white;
+    color: #1a1a1a;
     position: relative;
 }
 
@@ -59,7 +59,7 @@
     font-family: Helvetica Neue, sans-serif;
     font-size: 300%;
     animation-fill-mode: forwards;
-    color: white;
+    color: #1a1a1a;
 }
 
 .text {
@@ -73,7 +73,7 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, #2e3f50, #252a41);
+    background-image: linear-gradient(to bottom, #1a1a1a, #151515);
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
