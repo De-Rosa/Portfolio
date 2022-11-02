@@ -52,9 +52,9 @@ let items = document.getElementsByClassName("tower-griditem");
 let animationActive = false;
 let isTextActive = false;
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xEEEEEE);
+// scene.background = new THREE.Color(0xEEEEEE);
 
-const renderer = new THREE.WebGLRenderer({antialias: true});
+const renderer = new THREE.WebGLRenderer({antialias: true, alpha:true});
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.LinearToneMapping;
 renderer.toneMappingExposure = Math.pow(2, -1.5  );

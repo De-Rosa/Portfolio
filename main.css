@@ -41,6 +41,8 @@
     font-family: Helvetica Neue, sans-serif;
     font-size: 300%;
     animation-fill-mode: forwards;
+    color: white;
+    position: relative;
 }
 
 .lowertext {
@@ -49,6 +51,7 @@
     font-weight: normal;
     animation-fill-mode: forwards;
     opacity: 0%;
+    color: white;
 }
 
 #title {
@@ -56,6 +59,7 @@
     font-family: Helvetica Neue, sans-serif;
     font-size: 300%;
     animation-fill-mode: forwards;
+    color: white;
 }
 
 .text {
@@ -65,12 +69,20 @@
     color: black;
     padding-top: 3vh;
     animation-fill-mode: forwards;
+    color: white;
 }
 
 body {
-    background-image: linear-gradient(to bottom, white, #dddddd);
+    background-image: linear-gradient(to bottom, #2e3f50, #252a41);
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     animation-fill-mode: forwards;
+    z-index: -99;
+}
+
+#selector {
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
