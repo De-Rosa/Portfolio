@@ -132,6 +132,7 @@ body {
     background-attachment: fixed;
     animation-fill-mode: forwards;
     z-index: -99;
+    overflow: hidden;
 }
 
 #selector {
