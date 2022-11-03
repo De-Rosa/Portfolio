@@ -7,6 +7,7 @@ import { DRACOLoader} from "/node_modules/three/examples/jsm/loaders/DRACOLoader
 
 let activeFloor = 0;
 let isLoadingActive = true;
+let isHelpActive = false;
 
 let mixer;
 let clock = new THREE.Clock();
@@ -33,17 +34,17 @@ const text = [
     ],
     [" Books",
         "In order to further my knowledge on subjects relating to coding I read books on how I can try to problem solve differently.",
-        "Some books I have read include:",
+        "<div style='font-weight: bold; font-size: 125%'>Some books I have read include:</div>",
         "Clean Code by Robert C. Martin",
         "Data-Oriented Design by Richard Fabian",
         "And other books relating to learning Visual Basic, C++, and C#."
     ],
     [" Projects",
-        "I have created many web (and console) applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#.",
-        "I have created a Python AI using Tensorflow to take in Discord (a messaging service) messages and try to learn speech by using it as a training resource. It would then try to use this to act as a chat bot.",
-        "In order to learn C# before A levels I have created a physics engine that emulates buoyancy of drawn objects.",
-        "I made a 3D matrix transformation graphing website that tells you the type of transformation it is and calculates the inverse of the input matrix so that I could use it for revision. (https://squaregithub.gitlab.io/matrix/)",
-        "Before GCSEs, I created a web game so that I, and a few friends, could revise in other forms. (https://squaregithub.gitlab.io/prism/)"
+        "I have created many web (and console) applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. Click on the previews to open them.",
+        "",
+        "<img src='/portfolio/matrix.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/matrix', '_blank')\"</img>  A 3D transformation matrix website.",
+        "<img src='/portfolio/prism.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/prism', '_blank')\"</img>  A web game made for GCSE revision.",
+        "I have also created a Python TensorFlow AI chat bot that uses messages from a Discord server (messaging server) as a training resource.\nBefore sixth form, I created a physics engine that emulates buoyancy of drawn objects in order to learn C#."
     ]
 ]
 const delay = ms => new Promise(res => setTimeout(res, ms));
@@ -54,7 +55,18 @@ let isTextActive = false;
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color(0xEEEEEE);
 
-const renderer = new THREE.WebGLRenderer({antialias: true, alpha:true});
+let pixelRatio = window.devicePixelRatio
+let AA = true
+if (pixelRatio > 1) {
+    AA = false
+}
+
+const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    powerPreference: "high-performance",
+    alpha:true,
+})
+
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.LinearToneMapping;
 renderer.toneMappingExposure = Math.pow(2, -1.5  );
@@ -66,7 +78,7 @@ renderer.domElement.style.float = "right";
 renderer.domElement.style.right = "0%";
 renderer.domElement.style.cursor = "pointer";
 
-const camera = new THREE.PerspectiveCamera(90,(window.innerWidth /1.5) / window.innerHeight, 0.1, 10000);
+const camera = new THREE.PerspectiveCamera(90,(window.innerWidth /1.5) / window.innerHeight, 0.1, 1100);
 camera.position.set(floorCameraCoordinates[activeFloor][0],floorCameraCoordinates[activeFloor][1],floorCameraCoordinates[activeFloor][2]);
 camera.lookAt(floorControlCoordinates[activeFloor][0], floorControlCoordinates[activeFloor][1], floorControlCoordinates[activeFloor][2])
 
@@ -108,7 +120,7 @@ cube.position.set(0,-75,0)
 scene.add(cube)
 
 
-modelLoader.load("/portfolio/compressedTower.glb", function(gltf) {
+modelLoader.load("/portfolio/compressed2Tower.glb", function(gltf) {
     gltf.scene.scale.set(100,100,100);
     gltf.scene.position.set(0,-150,0);
 
@@ -226,9 +238,21 @@ async function lerpBetweenFloors(timingInMs) {
         .start();
 }
 
+async function hideInfo() {
+    await document.getElementsByClassName("inner-circle")[0].animate([
+        {opacity: "20%"},
+        {opacity: "0%"},
+    ], {
+        duration: 500,
+        iterations: 1,
+        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+        fill: "forwards"
+    })
+}
 async function openWebsite() {
     renderer.domElement.style.cursor = "grabbing";
     await hideName();
+    await hideInfo();
     await animateMovementModel();
     animationActive = true;
 
