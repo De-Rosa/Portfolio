@@ -85,13 +85,13 @@ controls.maxAzimuthAngle =  Math.PI * 0.6;
 controls.minAzimuthAngle = -(Math.PI * 0.2);
 controls.maxPolarAngle =  Math.PI * 0.5;
 controls.minPolarAngle =  -(Math.PI * 0.5);
-let globalLight = new THREE.HemisphereLight(0xffffff, 0x080820, 1);
+let globalLight = new THREE.HemisphereLight(0xffffff, 0x080820, 0.5);
 scene.add(globalLight);
 controls.zoomSpeed = 0.3;
 controls.rotateSpeed = 0.3;
 controls.enabled = false ;
 
-const light1  = new THREE.AmbientLight(0xffffff, 1);
+const light1  = new THREE.AmbientLight(0xffffff, 0.5);
 light1.name = 'ambient_light';
 scene.add( light1 );
 
