@@ -96,6 +96,7 @@
     animation-fill-mode: forwards;
     color: #1a1a1a;
     position: relative;
+    white-space: nowrap;
 }
 
 .lowertext {
