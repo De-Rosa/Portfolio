@@ -131,7 +131,14 @@ modelLoader.load("/portfolio/compressed2Tower.glb", function(gltf) {
     gltf.animations.forEach(( clip ) => {
         mixer.clipAction(clip).play();
     });
-
+    
+    var tween = new TWEEN.Tween(fromScale)
+        .to(toScale,1200)
+        .easing(TWEEN.Easing.Cubic.Out)
+        .onUpdate(function (object) {
+            gltf.scene.scale.set(object.x, object.y, object.z)
+        })
+        .start();
     moveElementsOnLeft();
 })
 
