@@ -77,6 +77,7 @@ renderer.domElement.style.position = "absolute";
 renderer.domElement.style.float = "right";
 renderer.domElement.style.right = "0%";
 renderer.domElement.style.cursor = "pointer";
+renderer.setClearColor(0x000000, 0.15);
 
 const camera = new THREE.PerspectiveCamera(90,(window.innerWidth /1.5) / window.innerHeight, 0.1, 1100);
 camera.position.set(floorCameraCoordinates[activeFloor][0],floorCameraCoordinates[activeFloor][1],floorCameraCoordinates[activeFloor][2]);

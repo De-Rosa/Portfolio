@@ -119,8 +119,7 @@
 .text {
     font-weight: normal;
     font-family: Helvetica Neue, sans-serif;
-    font-size: 150%;
-    color: black;
+    font-size: 140%;
     padding-top: 3vh;
     animation-fill-mode: forwards;
     color: white;
