@@ -133,6 +133,8 @@ modelLoader.load("/portfolio/compressed2Tower.glb", function(gltf) {
         mixer.clipAction(clip).play();
     });
     
+    let fromScale = new THREE.Vector3(0,0,0)
+    let toScale = new THREE.Vector3(100, 100, 100)
     var tween = new TWEEN.Tween(fromScale)
         .to(toScale,1200)
         .easing(TWEEN.Easing.Cubic.Out)
