@@ -26,10 +26,10 @@ const floorControlCoordinates = [[0,-100,0], [-150,190,-300],[-470,490,-300]]
 
 const text = [
     [" About Me",
-        "I have experience coding in numerous programming languages, such as C#, Python, Java, HTML, Javascript, and C++.",
-        "I enjoy coding in programming languages mainly because I get to understand more complex solutions to coding problems and more intricate details of these languages.",
-        "As I have been using computers since I was young, I have always had ambition to code - initially creating Java plugins for Minecraft.",
-        "Nowadays, I am always surrounded with topics related to computing (media relating to programming) and so I always try to learn something new every day.",
+        "I have experience coding in numerous programming languages, including C#, Python, Java, HTML, JavaScript and C++.",
+        "I enjoy coding in diverse programming languages because it allows me to explore more complex solutions to coding problems. I find the intricate details of programming languages fascinating.",
+        "I have always had an ambition to code, which began when I was younger with my creation of Java plugins for Minecraft.",
+        "In my daily life, I am fully absorbed in Computing and I aim to teach myself something new about it every day.",
         "I am currently studying Maths, Further Maths, and Computer Science for A Levels."
     ],
     [" Books",
