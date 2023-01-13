@@ -44,7 +44,7 @@ const text = [
         "",
         "<img src='/portfolio/matrix.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/matrix', '_blank')\"</img>  A 3D transformation matrix website.",
         "<img src='/portfolio/prism.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/prism', '_blank')\"</img>  A web game made for GCSE revision.",
-        "I have also delved into developing programs that use machine learning: an evolutionary simulator using a neural network for brains, and I have attempted to use a TensorFlow bot to learn words from parsing data from a Discord server.\nBefore sixth form, I created a physics engine that emulates buoyancy of drawn objects in order to learn C#."
+        "I have also enjoyed developing programs that use machine learning and neural networks: an evolutionary simulator using a neural network for brains, a program where a user can draw a machine made out of pistons and motors and the AI tries to learn how to walk (using rendering/physics engines made from scratch), and other mini-projects using TensorFlow (such as a Discord bot learning words).\nBefore sixth form, I created a physics engine that emulates buoyancy of drawn objects in order to learn C#."
     ]
 ]
 const delay = ms => new Promise(res => setTimeout(res, ms));
