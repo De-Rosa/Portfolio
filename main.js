@@ -26,14 +26,14 @@ const floorControlCoordinates = [[0,-100,0], [-150,190,-300],[-470,490,-300]]
 
 const text = [
     [" About Me",
-        "I have experience coding in numerous programming languages, including C#, Python, Java, HTML, JavaScript and C++.",
-        "I enjoy coding in diverse programming languages because it allows me to explore more complex solutions to coding problems. I find the intricate details of programming languages fascinating.",
-        "I have always had an ambition to code, which began when I was younger with my creation of Java plugins for Minecraft.",
+        "I have experience coding in numerous programming languages, including C#, Python, Java, HTML, and JavaScript.",
+        "I enjoy studying about programming languages, especially lower level languages like C, because it allows me to explore more complex solutions to coding problems. I find the intricate details of programming languages fascinating.",
+        "I have always had an ambition to code as the process of solving a problem and decomposing it into it's several parts has always intrigued me.",
         "In my daily life, I am fully absorbed in Computing and I aim to teach myself something new about it every day. I have currently been enjoying studying and listening to podcasts about machine learning.",
         "I am currently studying Maths, Further Maths, and Computer Science for A Levels."
     ],
     [" Books",
-        "In order to further my knowledge on subjects relating to coding I read books on how I can try to problem solve differently.",
+        "In order to further my knowledge on subjects relating to coding I stay up to date with papers or books relating to Computer Science.",
         "<div style='font-weight: bold; font-size: 125%'>Some books I have read include:</div>",
         "Clean Code by Robert C. Martin, Data-Oriented Design by Richard Fabian",
         "How to think like a Mathematician by Kevin Houston, and I have started to read Fundamentals of Machine Learning by John Kelleher",
@@ -43,8 +43,8 @@ const text = [
         "I have created many web (and console) applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. Click on the previews to open them.",
         "",
         "<img src='/portfolio/matrix.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/matrix', '_blank')\"</img>  A 3D transformation matrix website.",
-        "<img src='/portfolio/prism.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/prism', '_blank')\"</img>  A web game made for GCSE revision.",
-        "I have also enjoyed developing programs that use machine learning and neural networks: an evolutionary simulator using a neural network for brains, a program where a user can draw a machine made out of pistons and motors and the AI tries to learn how to walk (using rendering/physics engines made from scratch), and other mini-projects using TensorFlow (such as a Discord bot learning words).\nBefore sixth form, I created a physics engine that emulates buoyancy of drawn objects in order to learn C#."
+        "<img src='/portfolio/prism.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/prism', '_blank')\"</img>  A web game made for GCSE french revision.",
+        "I have also enjoyed developing programs that use machine learning and neural networks: an evolutionary simulator using a neural network so that the creatures adapt, a program where a user can draw a machine made out of pistons and motors and the AI tries to learn how to walk (using rendering/physics engines made from scratch), and other mini-projects using TensorFlow (such as a Discord bot learning words).\nBefore sixth form, I created a physics engine that emulates buoyancy of drawn objects in order to learn C#. I am always looking for new challenging ideas to start coding."
     ]
 ]
 const delay = ms => new Promise(res => setTimeout(res, ms));
