@@ -28,18 +28,21 @@ const text = [
     [" About Me",
         "I have experience coding in numerous programming languages, including C#, Python, Java, HTML/JavaScript, and C++.",
         "In my daily life, I am fully absorbed in Computing and I aim to teach myself something new about it every day.",
-        "I have finished my A Levels consisting of Maths, Further Maths, and Computer Science."
+        "I have finished my A Levels consisting of Maths, Further Maths, and Computer Science.",
+        "",
+        ""
     ],
     [" Media",
         "In order to further my knowledge on subjects relating to coding I stay up to date with papers or books relating to Computer Science.",
         "<div style='font-weight: bold; font-size: 125%'>Some books I have read include:</div>",
         "Clean Code by Robert C. Martin, Data-Oriented Design by Richard Fabian, How to think like a Mathematician by Kevin Houston, Introduction to Modern Cryptography by Jonathan Katz, Basics of Compiler Design by Aegidius Mogensen",
-        "I have also read books/articles and other media like podcasts relating to Artificial Intelligence in order to understand current issues and to create ML projects of my own."
+        "I have also read books/articles and other media like podcasts relating to Artificial Intelligence in order to understand current issues and to create ML projects of my own.",
+        ""
     ],
     [" Projects",
         "I have created different applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. Below lists a few of my more recent projects.",
-        "<a href='https://squaregithub.gitlab.io/visualizer'>A Desmos-style 3D graphing program.</a>",
-        "<a href='https://play-flashcards.fly.dev'>A WebSocket multiplayer game which uses a PDF library to seperate questions.</a>",
+        "<div href='https://squaregithub.gitlab.io/visualizer'>A Desmos-style 3D graphing program.</div>",
+        "<div href='https://play-flashcards.fly.dev'>A WebSocket multiplayer game which uses a PDF library to seperate questions.</div>",
         "",
         "My machine learning work includes a C# evolutionary simulator using a neural network which can mutate, an implementation of Proximal Policy Optimization from scratch built on my own physics library, and the use of TensorFlow for image classification of flags in images.",
         "I am currently studying how to create my own language compiler."
