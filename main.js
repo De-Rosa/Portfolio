@@ -41,8 +41,8 @@ const text = [
     ],
     [" Projects",
         "I have created different applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. Below lists a few of my more recent projects.",
-        "<div href='https://squaregithub.gitlab.io/visualizer'>A Desmos-style 3D graphing program.</div>",
-        "<div href='https://play-flashcards.fly.dev'>A WebSocket multiplayer game which uses a PDF library to seperate questions.</div>",
+        "",
+        "",
         "",
         "My machine learning work includes a C# evolutionary simulator using a neural network which can mutate, an implementation of Proximal Policy Optimization from scratch built on my own physics library, and the use of TensorFlow for image classification of flags in images.",
         "I am currently studying how to create my own language compiler."
