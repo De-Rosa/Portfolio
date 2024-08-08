@@ -33,7 +33,7 @@ const text = [
     [" Media",
         "In order to further my knowledge on subjects relating to coding I stay up to date with papers or books relating to Computer Science.",
         "<div style='font-weight: bold; font-size: 125%'>Some books I have read include:</div>",
-        "Clean Code by Robert C. Martin, Data-Oriented Design by Richard Fabian, How to think like a Mathematician by Kevin Houston",
+        "Clean Code by Robert C. Martin, Data-Oriented Design by Richard Fabian, How to think like a Mathematician by Kevin Houston, Introduction to Modern Cryptography by Jonathan Katz, Basics of Compiler Design by Aegidius Mogensen",
         "I have also read books/articles and other media like podcasts relating to Artificial Intelligence in order to understand current issues and to create ML projects of my own."
     ],
     [" Projects",
