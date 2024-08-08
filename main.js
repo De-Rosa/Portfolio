@@ -26,25 +26,23 @@ const floorControlCoordinates = [[0,-100,0], [-150,190,-300],[-470,490,-300]]
 
 const text = [
     [" About Me",
-        "I have experience coding in numerous programming languages, including C#, Python, Java, HTML, and JavaScript. I am planning on learning C++.",
-        "I enjoy studying about programming languages because it allows me to explore more complex solutions to coding problems. I find the intricate details of programming languages fascinating.",
-        "I have always had an ambition to code as the process of solving a complicated problem and decomposing it into it's several parts has always intrigued me.",
+        "I have experience coding in numerous programming languages, including C#, Python, Java, HTML/JavaScript, and C++.",
         "In my daily life, I am fully absorbed in Computing and I aim to teach myself something new about it every day.",
-        "I am currently studying Maths, Further Maths, and Computer Science for A Levels."
+        "I have finished my A Levels consisting of Maths, Further Maths, and Computer Science."
     ],
     [" Media",
         "In order to further my knowledge on subjects relating to coding I stay up to date with papers or books relating to Computer Science.",
         "<div style='font-weight: bold; font-size: 125%'>Some books I have read include:</div>",
         "Clean Code by Robert C. Martin, Data-Oriented Design by Richard Fabian, How to think like a Mathematician by Kevin Houston",
-        "I regularly watch videos relating to complex mathematical questions and programming techniques which help challenge myself.",
-        "I have also listened to a podcast series by DEPT which covers topics relating to topics in machine learning."
+        "I have also read books/articles and other media like podcasts relating to Artificial Intelligence in order to understand current issues and to create ML projects of my own."
     ],
     [" Projects",
-        "I have created many web (and console) applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. Click on the previews to open them.",
+        "I have created different applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. Below lists a few of my more recent projects.",
+        "<a href='https://squaregithub.gitlab.io/visualizer'>A Desmos-style 3D graphing program.</a>",
+        "<a href='https://play-flashcards.fly.dev'>A WebSocket multiplayer game which uses a PDF library to seperate questions.</a>",
         "",
-        "<img src='/portfolio/matrix.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/matrix', '_blank')\"</img>  A 3D transformation matrix website.",
-        "<img src='/portfolio/prism.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/prism', '_blank')\"</img>  A web game made for GCSE french revision.\n<img src='/portfolio/visualiser.png' style='max-height: 10vh; max-width: 10vw; vertical-align: middle' onclick=\"window.open('https://squaregithub.gitlab.io/visualizer', '_blank')\"</img> An updated version of the matrix website, edited to include 2D and 3D graphing.",
-        "I have also created projects relating to machine learning: I created my own feed-foward neural network from scratch in C# for use in an evolutionary simulator (where creatures evolve to eat and drink). I, alongside a physics engine created from scratch (which resolves impulses, etc for angular and linear velocities), used this NN to create an app for machines learning to move (where the user inputs a machine that moves using pistons, motors, etc).\nI also used Tensorflow for image classification of flags in images (with a dataset scraped from Bing).\nBefore sixth form, I created a physics engine that emulates buoyancy of drawn objects in order to learn C#. I am always looking for new challenging ideas to start coding, and am currently looking at sarcasm detection using NLP techniques."
+        "My machine learning work includes a C# evolutionary simulator using a neural network which can mutate, an implementation of Proximal Policy Optimization from scratch built on my own physics library, and the use of TensorFlow for image classification of flags in images.",
+        "I am currently studying how to create my own language compiler."
     ]
 ]
 const delay = ms => new Promise(res => setTimeout(res, ms));
