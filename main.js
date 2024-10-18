@@ -42,11 +42,9 @@ const text = [
     [" Projects",
         "I have created different applications in order to refine my coding skills but also for specific purposes. Many of these applications are based on Javascript, HTML, Python, and C#. A few of my recent projects can be found on my GitHub:",
         "https://github.com/De-Rosa",
+        "I am currently studying how to create my own language compiler.",
         "",
-        "",
-        "",
-        "",
-        "I am currently studying how to create my own language compiler."
+        ""
     ]
 ]
 const delay = ms => new Promise(res => setTimeout(res, ms));
